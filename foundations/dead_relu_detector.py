@@ -37,12 +37,4 @@ class Solution:
             if inc and dead_fractions[-1] > 0.1:
                 return 'reduce_learning_rate'
         return 'healthy'
-        # Given dead fractions per ReLU layer, suggest a fix.
-        # Check in this order:
-        # 1. 'use_leaky_relu' if any layer has dead fraction > 0.5
-        # 2. 'reinitialize' if the first layer has dead fraction > 0.3
-        # 3. 'reduce_learning_rate' if dead fraction strictly increases
-        #    with depth AND the last layer's fraction > 0.1
-        # 4. 'healthy' if max dead fraction < 0.1
-        # 5. 'healthy' otherwise
-        pass
+        
