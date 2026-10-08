@@ -16,4 +16,4 @@ class Solution(nn.Module):
 
     def forward(self, images: TensorType[float]) -> TensorType[float]:
         torch.manual_seed(0)
-        return self.model(images)
+        return torch.round(self.model(images), decimals=4)
